@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Marketplace custom colors
+				navy: {
+					DEFAULT: '#1A2E4C',
+					light: '#2A4066',
+					dark: '#0F1C33'
+				},
+				gold: {
+					DEFAULT: '#D4AF37',
+					light: '#E6C65C',
+					dark: '#B3901F'
+				},
+				neutral: {
+					DEFAULT: '#F5F2E8',
+					light: '#FAF8F3',
+					dark: '#E5E0D1'
 				}
 			},
 			borderRadius: {
@@ -84,11 +101,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.5s ease-out'
+			},
+			fontFamily: {
+				serif: ['Georgia', 'serif'],
+				sans: ['Inter', 'sans-serif']
 			}
 		}
 	},
