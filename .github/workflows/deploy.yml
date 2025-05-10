@@ -16,6 +16,7 @@ concurrency:
 
 env:
   NODE_VERSION: '20'
+  GITHUB_PAGES: true
 
 jobs:
   build:
@@ -43,6 +44,8 @@ jobs:
       
       - name: Build
         run: npm run build
+        env:
+          NODE_ENV: production
       
       - name: List dist directory
         run: ls -la dist
