@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/stamp-coin-emporium/',
+  base: process.env.NODE_ENV === 'production' ? '/stamp-coin-emporium/' : '/',
   server: {
     host: "::",
     port: 8080,
