@@ -30,11 +30,22 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
           cache: 'npm'
       
+      - name: Debug Node and npm versions
+        run: |
+          node --version
+          npm --version
+      
       - name: Install dependencies
         run: npm ci
       
+      - name: List files
+        run: ls -la
+      
       - name: Build
         run: npm run build
+      
+      - name: List dist directory
+        run: ls -la dist
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
